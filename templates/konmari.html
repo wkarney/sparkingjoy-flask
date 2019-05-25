@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- One -->
+<section id="one">
+        <header class="major">
+            <h1>Sparking Joy with Natural Language Processing </h1>
+            <p>April 2019 <br>
+                Check it out on GitHub: <a href="https://github.com/wkarney/sparking-joy-NLP" class="icons icon fa-github" target="_blank"></a>
+            </p>
+            <div class="col-8"><span class="image left"><img src="{{ url_for('static', filename='images/fulls/marie-kondo-netflix.jpg') }}" display="inline" alt="" /></span></div>
+            <h3><br>A simple Flask web application for determing the "konmariness" of an excerpt of text.</h3>
+</section>
+
+<section id="two">
+    <section>
+        <div class="col-12">
+        <br>
+        <form action = "/sparkjoy" method="POST">
+                <h4> <br> <br> Enter text to determine whether it sparks joy: <textarea name="test_text" id="test_text" placeholder="Enter your text" rows="6"></textarea> </p>
+                <p> <input type ="submit" value="Does it spark joy?" /> </h4>
+        </form>
+        </div>
+    </section>
+</section>
+<!-- Two -->
+<!-- <section id="two">
+    <div class="row">
+            <div class="col-6 col-12-xsmall">
+                <h2>Problem Statements</h2>
+                <ul>
+                    <li>Dolor pulvinar etiam magna etiam.</li>
+                    <li>Sagittis adipiscing lorem eleifend.</li>
+                    <li>Felis enim feugiat dolore viverra.</li>
+                </ul>
+    <h5>Left &amp; Right</h5>
+    <p><span class="image left"><img src=""{{ url_for('static', filename='images/avatar.jpg') }}"" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+    <p><span class="image right"><img src=""{{ url_for('static', filename='images/avatar.jpg') }}"" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+</section> -->
+
+{% endblock %}

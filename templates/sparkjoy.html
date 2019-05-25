@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- One -->
+<section id="one">
+        <header class="major">
+            {% if outcome %}
+                <h2>Your text Sparks Joy!</h2>
+                <div class="col-12"><span class="image fit"><img src="{{ url_for('static', filename='images/fulls/sparkjoy.png') }}" display="inline" alt="" /></span></div>
+            {% else %}
+                <h2>Your text doesn't Spark Joy!</h2>
+                <div class="col-12"><span class="image fit"><img src="{{ url_for('static', filename='images/fulls/This-one-does-not-spark-joy.png') }}" display="inline" alt="" /></span></div>
+
+            {% endif %}
+
+            <!-- <h1>Sparking Joy with Natural Language Processing </h1>
+            <p>April 2019 <br>
+                Check it out on GitHub: <a href="https://github.com/wkarney/sparking-joy-NLP" class="icons icon fa-github" target="_blank"></a>
+            </p>
+            <div class="col-8"><span class="image left"><img src="{{ url_for('static', filename='images/fulls/marie-kondo-netflix.jpg') }}" display="inline" alt="" /></span></div>
+            <h4><br>Tidying up with natural language processing of Reddit posts </h4> -->
+</section>
+
+<section id="two">
+
+    <!-- The model says: <br>{{outcome}} <br>
+    You are {{probs}} tidy! <br>
+    <br>
+    This is the text you entered: {{words}} -->
+</section>
+<!-- Two -->
+<!-- <section id="two">
+    <div class="row">
+            <div class="col-6 col-12-xsmall">
+                <h2>Problem Statements</h2>
+                <ul>
+                    <li>Dolor pulvinar etiam magna etiam.</li>
+                    <li>Sagittis adipiscing lorem eleifend.</li>
+                    <li>Felis enim feugiat dolore viverra.</li>
+                </ul>
+    <h5>Left &amp; Right</h5>
+    <p><span class="image left"><img src=""{{ url_for('static', filename='images/avatar.jpg') }}"" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+    <p><span class="image right"><img src=""{{ url_for('static', filename='images/avatar.jpg') }}"" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+</section> -->
+
+{% endblock %}

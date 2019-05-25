@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Will Karnasiewicz, CFA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Will Karnasiewicz's personal website. data scientist | financial analyst | homebrewer">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">>
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="{{ url_for('static', filename='images/GA_04.18-avatar-compressed.jpg') }}" alt="" /></a>
+					<h1><strong>Will Karnasiewicz</strong> <h1>
+					<h1> Data scientist, <br />
+						CFA charterholder, <br />
+						amateur homebrewer <br /> </h1>
+				</div>
+			</header>
+
+        <!-- Main -->
+			<div id="main">
+                <div class="container">
+
+                        <!-- child template -->
+                        {% block content %}{% endblock %}
+                    
+                        <!-- errors -->
+                        {% if error %}
+                            <p class="error"><strong>Error:</strong> {{ error }}</p>
+                        {% endif %}
+                    
+                        <!-- messages -->
+                        {% for message in get_flashed_messages() %}
+                            {{ message }}
+                        {% endfor %}
+                </div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a target="_blank" href="https://twitter.com/wmkarney" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a target="_blank" href="https://github.com/wkarney" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/in/wkarnasiewicz/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a target="_blank" href="https://angel.co/will-karnasiewicz" class="icon fa-angellist"><span class="label">Linkedin</span></a></li>
+						<li><a target="_blank" href="mailto:willkarnasiewicz@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li><a target="_blank"href="./assets/resume/Will_Karnasiewicz_CFA_resume.pdf">Download my resume</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Will Karnasiewicz</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.poptrox.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>
