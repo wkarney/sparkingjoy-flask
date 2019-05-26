@@ -23,10 +23,10 @@ def sparkjoy():
         result=request.form
         test_text = [result['test_text']]
 
-        if result['model-type'] == 'model-type-vc':
+        if result['model-type'] == 'vc':
             model = vcmodel
             modeltype = "vc"
-        elif result['model-type'] == 'model-type-nb':
+        elif result['model-type'] == 'nb':
             model = vcmodel # haven't loaded in fitted naive bayes yet
             modeltype = "nb"
             # model = nbmodel

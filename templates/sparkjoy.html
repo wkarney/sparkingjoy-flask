@@ -1,13 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- Two -->
+<!-- One -->
 <section id="one">
-        <h1>Sparking Joy with Natural Language Processing </h1>
-        <p>April 2019 <br>
-            Check it out on GitHub: <a href="https://github.com/wkarney/sparking-joy-NLP" class="icons icon fa-github" target="_blank"></a>
-        </p>
-
         <header class="major">
             {% if outcome %}
                 <div class="col-12">
@@ -17,7 +12,7 @@
                     </span>
                 </div>
             {% else %}
-                <h2>Your text doesn't Spark Joy!</h2>
+                <h2 class="row aln-center">Your text doesn't Spark Joy!</h2>
                 <div class="col-12">
                     <span class="image fit">
                         <img src="{{ url_for('static', filename='images/fulls/This-one-does-not-spark-joy.png') }}" display="inline" alt="" />
@@ -37,18 +32,26 @@
                     Logistic Regression
                 {% endif %} </h4>
 
-                <h4>Strength of "Konmariness" in your text: {{probs}}</h4>
+                <h4>Strength of your text's "Konmariness": {{probs}}</h4>
                 <h5>(Greater than 50% indicates "Sparks Joy" and higher indicates greater joy!)</h5>
 
                 <h4><u>You entered the following text:</u></h4>
                 <textarea name="" id="" cols="30" rows="10">{{words}}</textarea>
             </div>
 </section>
-
+<br>
 <section id="two">
-    <div>
-        <a href="http://www.willkarnasiewicz.com">Head back to my homepage.</a>
+    <span>
+    <div class="row">
+        <!-- Need to add in project description page -->
+        <!-- <div class="col-12 col-12-small">
+                <h4><a href="http://www.willkarnasiewicz.com/konmari-nlp.html">Read more about this project.</a></h4>
+        </div> -->
+        <div class="col-12 col-12-small">
+                <h4><a href="http://www.willkarnasiewicz.com">Head back to my homepage.</a></h4>
+        </div>
     </div>
+    </span>
 </section>
 
 {% endblock %}
