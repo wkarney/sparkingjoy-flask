@@ -17,11 +17,23 @@ def konmari():
 def sparkjoy():
     
     with open('./konmari-vc-model.pickle', 'rb') as f:
-        model = pickle.load(f)
+        vcmodel = pickle.load(f)
     
     if request.method=='POST':
         result=request.form
         test_text = [result['test_text']]
+
+        if result['model-type'] == 'model-type-vc':
+            model = vcmodel
+            modeltype = "vc"
+        elif result['model-type'] == 'model-type-nb':
+            model = vcmodel # haven't loaded in fitted naive bayes yet
+            modeltype = "nb"
+            # model = nbmodel
+        else:
+            model = vcmodel # haven't loaded in fitted logistic regression yet
+            modeltype = "lr"
+            # model = logregmodel
     
     # cleaned_test_text = [re.sub("[^a-zA-Z]+"," ", test_text)]
     prediction = model.predict(test_text)
@@ -31,7 +43,7 @@ def sparkjoy():
         result = "Doesn't spark joy - are you a hoarder?!"
     prob_tidy = f"{round(model.predict_proba(test_text)[0][1]*100,0)}%"
         
-    return render_template('sparkjoy.html', outcome=prediction, probs=prob_tidy, words=test_text[0])
+    return render_template('sparkjoy.html', outcome=prediction, probs=prob_tidy, words=test_text[0], modeltype=modeltype)
 
 # script initialization
 if __name__ == '__main__':

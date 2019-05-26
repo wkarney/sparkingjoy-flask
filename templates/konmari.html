@@ -4,21 +4,46 @@
 <!-- One -->
 <section id="one">
         <header class="major">
-            <h1>Sparking Joy with Natural Language Processing </h1>
-            <p>April 2019 <br>
-                Check it out on GitHub: <a href="https://github.com/wkarney/sparking-joy-NLP" class="icons icon fa-github" target="_blank"></a>
+            <h2>Sparking Joy with Natural Language Processing </h2>
+            <h4>A simple Flask web application for determing the "konmariness" of an excerpt of text.</h4>
+            <p>
+                April 2019 
+                <br>
+                Check it out on GitHub: 
+                <a href="https://github.com/wkarney/sparking-joy-NLP" class="icons icon fa-github" target="_blank"></a>
             </p>
-            <div class="col-8"><span class="image left"><img src="{{ url_for('static', filename='images/fulls/marie-kondo-netflix.jpg') }}" display="inline" alt="" /></span></div>
-            <h3><br>A simple Flask web application for determing the "konmariness" of an excerpt of text.</h3>
+            <div class="col-12">
+                <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/fulls/marie-kondo-netflix.jpg') }}" display="inline" alt="" />
+                </span>
+            </div>
 </section>
 
 <section id="two">
     <section>
         <div class="col-12">
-        <br>
         <form action = "/sparkjoy" method="POST">
-                <h4> <br> <br> Enter text to determine whether it sparks joy: <textarea name="test_text" id="test_text" placeholder="Enter your text" rows="6"></textarea> </p>
-                <p> <input type ="submit" value="Does it spark joy?" /> </h4>
+            <div class="row gtr-uniform gtr-50">
+                <div class="col-12" >
+                    <h4><u>Choose your model type:</u></h4>  
+                </div>
+                <div class="col-4 col-12-small">
+                    <input type="radio" id="model-type-logreg" name="model-type" value="lr" checked>
+                    <label for="model-type-logreg">Logistic Regression</label>
+                </div>
+                <div class="col-4 col-12-small">
+                    <input type="radio" id="model-type-nb" name="model-type" value="nb">
+                    <label for="model-type-nb">Naive Bayes</label>
+                </div>
+                <div class="col-4 col-12-small">
+                    <input type="radio" id="model-type-vc" name="model-type" value="vc">
+                    <label for="model-type-vc">Voting Classifier</label>
+                </div>
+                <div class="col-12">
+                    <h4> <u>Enter text to determine whether it sparks joy:</u> <textarea name="test_text" id="test_text" placeholder="Enter your text" rows="6"></textarea> </p>
+                    <p> <input type ="submit" value="Does it spark joy?" /> </h4>
+                </div>
+            </div>
         </form>
         </div>
     </section>
