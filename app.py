@@ -16,24 +16,22 @@ def konmari():
 @app.route('/sparkjoy',methods=['POST','GET'])
 def sparkjoy():
     
-    with open('./konmari-vc-model.pickle', 'rb') as f:
-        vcmodel = pickle.load(f)
-    
     if request.method=='POST':
         result=request.form
         test_text = [result['test_text']]
 
         if result['model-type'] == 'vc':
-            model = vcmodel
+            with open('./pickled-models/sparkingjoy-model-vc.pickle', 'rb') as f:
+                model = pickle.load(f)
             modeltype = "vc"
         elif result['model-type'] == 'nb':
-            model = vcmodel # haven't loaded in fitted naive bayes yet
+            with open('./pickled-models/sparkingjoy-model-nb.pickle', 'rb') as f:
+                model = pickle.load(f)
             modeltype = "nb"
-            # model = nbmodel
         else:
-            model = vcmodel # haven't loaded in fitted logistic regression yet
+            with open('./pickled-models/sparkingjoy-model-logreg.pickle', 'rb') as f:
+                model = pickle.load(f)
             modeltype = "lr"
-            # model = logregmodel
     
     # cleaned_test_text = [re.sub("[^a-zA-Z]+"," ", test_text)]
     prediction = model.predict(test_text)
