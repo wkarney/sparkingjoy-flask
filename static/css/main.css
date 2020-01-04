@@ -2498,7 +2498,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		.button.primary {
 			background-color: #BBCADB;
-			border-color: #BBCADB
+			border-color: #BBCADB;
 			color: #ffffff !important;
 		}
 
@@ -2573,7 +2573,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), url("./images/bg.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -2622,7 +2622,7 @@ input, select, textarea {
 			margin: 0 0 1em 0;
 			height: auto;
 			width: auto;
-			max-width: 20em;
+			max-width: 17em;
 		}
 
 /* Footer */
@@ -3048,7 +3048,7 @@ input, select, textarea {
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+				background-image: url("images/overlay.png"), url("./images/bg.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;
